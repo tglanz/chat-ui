@@ -6,6 +6,9 @@ import logo from '../assets/spotim-logo.jpg'
 import {Container, Image} from 'semantic-ui-react'
 import styled from 'styled-components';
 
+import MessageCreationContainer from './MessageCreationContainer';
+import MessagesList from './MessagesList';
+
 const Logo = styled.div`
       img{
         margin-left: auto;
@@ -15,10 +18,28 @@ const Logo = styled.div`
       
 `;
 
+const getDummyMessages = () => {
+  const avatars = [
+    'https://spotim-demo-chat-server.herokuapp.com/avatars/001-snorlax.png',
+    'https://spotim-demo-chat-server.herokuapp.com/avatars/002-psyduck.png',
+    'https://spotim-demo-chat-server.herokuapp.com/avatars/003-pikachu.png',
+    'https://spotim-demo-chat-server.herokuapp.com/avatars/004-jigglypuff.png',
+    'https://spotim-demo-chat-server.herokuapp.com/avatars/005-bullbasaur.png'
+  ];
 
-class App extends React.PureComponent {
-  render() {
-    return <Container className={'spotim-header'}>
+  const justAText = 'this is what pikachu wrote...';
+
+  const a = avatars.map(avatar => ({
+    avatar,
+    username: avatar.split('/00')[1],
+    text: avatar.indexOf("pikachu") == -1 ? avatar : justAText
+  }));
+
+  return a;
+}
+
+export default () => <div>
+  <Container className={'spotim-header'}>
       <div className={'spotim-title'}>
         Welcome to the Spot.IM Chat app
       </div>
@@ -26,10 +47,10 @@ class App extends React.PureComponent {
         <Logo>
           <Image size={'tiny'} src={logo}/>
         </Logo>
-
       </div>
-    </Container>
-  }
-}
+  </Container>
 
-export default App;
+  <MessagesList messages={ getDummyMessages().map(x => ({ ...x, key: x.username })) }/>
+
+  <MessageCreationContainer />  
+</div>

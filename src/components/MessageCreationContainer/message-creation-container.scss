@@ -1,0 +1,19 @@
+.message-creation-container {
+    /* pin */
+    position: absolute;
+    bottom: 3%;
+    right: 1%;
+
+    /* shadow */
+    -webkit-box-shadow: 6px 7px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 7px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 7px 6px 0px rgba(0,0,0,0.75);
+
+    /* round a bit */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    width: 30%;
+    padding: 4px 2px 0 2px;    
+}

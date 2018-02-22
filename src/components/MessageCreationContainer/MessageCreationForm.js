@@ -77,3 +77,5 @@ export default compose(
         }
     })
 )(MessageCreationForm);
+
+export const Unconnected = MessageCreationForm;

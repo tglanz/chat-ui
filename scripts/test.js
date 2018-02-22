@@ -23,5 +23,8 @@ if (!process.env.CI && argv.indexOf('--coverage') < 0) {
   argv.push('--watch');
 }
 
+if (!argv.some(arg => arg.startsWith('--setupTestFrameworkScriptFile'))){
+  argv.push("--setupTestFrameworkScriptFile=./config/jest/setup")
+}
 
 jest.run(argv);

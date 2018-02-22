@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container render 1`] = `
+<div
+  className="message-creation-container"
+>
+  <form
+    action={undefined}
+    className="ui form"
+    onSubmit={[Function]}
+  >
+    <h2
+      className="ui header"
+    >
+      Send A Message
+      <img
+        alt={undefined}
+        className="ui circular right floated image"
+        height={undefined}
+        src=""
+        width={undefined}
+      />
+    </h2>
+    <div
+      className="field"
+    >
+      <label
+        htmlFor={undefined}
+      >
+        Your username
+      </label>
+      <div
+        className="ui icon input"
+        content={undefined}
+      >
+        <input
+          disabled={undefined}
+          name="username"
+          onChange={[Function]}
+          placeholder="Your username"
+          required={undefined}
+          tabIndex={undefined}
+          type="text"
+          value=""
+        />
+        <i
+          aria-hidden="true"
+          className="user icon"
+        />
+      </div>
+    </div>
+    <div
+      className="field"
+    >
+      <textarea
+        content={undefined}
+        disabled={undefined}
+        name="text"
+        onChange={[Function]}
+        onInput={[Function]}
+        required={undefined}
+        rows={3}
+        style={
+          Object {
+            "resize": "",
+          }
+        }
+        type={undefined}
+        value=""
+      />
+    </div>
+    <div
+      className="ui error message"
+    >
+      <div
+        className="content"
+      >
+        <div
+          className="header"
+        >
+          Oops
+        </div>
+        <p>
+          
+        </p>
+      </div>
+    </div>
+    <div
+      className="field"
+    >
+      <button
+        className="ui icon left labeled button"
+        disabled={undefined}
+        onClick={[Function]}
+        required={undefined}
+        role="button"
+        tabIndex={undefined}
+        type={undefined}
+      >
+        Send
+        <i
+          aria-hidden="true"
+          className="send icon"
+        />
+      </button>
+    </div>
+  </form>
+</div>
+`;

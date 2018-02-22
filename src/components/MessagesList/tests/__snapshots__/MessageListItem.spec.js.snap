@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageListItem snapshot 1`] = `
+<div
+  className="item message-list-item"
+  data-value={undefined}
+  onClick={[Function]}
+  role="listitem"
+>
+  <img
+    alt={undefined}
+    className="ui avatar circular image"
+    height={undefined}
+    src="some avatar"
+    width={undefined}
+  />
+  <div
+    className="content"
+  >
+    <h3
+      className="header"
+    >
+      some username
+    </h3>
+    <h6
+      className="header"
+    >
+      a few seconds ago
+    </h6>
+    <div
+      className="description"
+    >
+      some text
+    </div>
+  </div>
+</div>
+`;

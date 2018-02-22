@@ -12,7 +12,6 @@ export default (Component, {
     const store = createStore();
 
     chatServer.messagesStream.subscribe(message => {
-        console.log("MESSAGE", message);
         store.dispatch(chatMessagesActions.received(message));
     });
     

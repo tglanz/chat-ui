@@ -65,7 +65,7 @@ export default compose(
     withState('text', 'setText', ''),
     withState('errorMessage', 'setErrorMessage', ''),
     connect(
-        state => {},
+        null,
         dispatch => ({
             onUsernameChanged: bindActionCreators(currentUserActions.usernameChanged, dispatch)
         })

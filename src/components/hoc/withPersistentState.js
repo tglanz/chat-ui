@@ -13,13 +13,13 @@ export default (name, setterName, defaultValue, storageName) => Component => cla
     componentWillMount(){
         // Restore the value from storage
         this.setState({
-            [name]: sessionStorage.getItem(name) || defaultValue
+            [name]: JSON.parse(sessionStorage.getItem(name)) || defaultValue
         });
     }
 
     setPropValue(value){
         // Set the value in storage, first, then set our state and it'll update the child
-        sessionStorage.setItem(name, value);
+        sessionStorage.setItem(name, JSON.stringify(value));
         this.setState({
             [name]: value
         })

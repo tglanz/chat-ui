@@ -31,6 +31,8 @@ export default ({
         return;
     }
 
+    console.log("Users avatars", usersAvatars);
+
     let avatar = usersAvatars[username] || randomlyProvideAvatar();
 
     if (!usersAvatars.hasOwnProperty(username)){
